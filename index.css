@@ -1,0 +1,65 @@
+:root {
+    --white-clr: hsl(0, 0%, 100%);
+    --light-gray-clr: hsl(212, 45%, 89%);
+    --grayish-blue-clr: hsl(220, 15%, 55%);
+    --dark-blue-clr: hsl(218, 44%, 22%);
+    --paragraph-fs: 15px;
+    --primary-fw: 700;
+    --secondary-fw: 400;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    font-family: 'Outfit', sans-serif;
+    font-size: var(--paragraph-fs);
+    background-color: var(--light-gray-clr);
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: min(90%, 20rem);
+    margin-inline: auto;
+}
+
+.card {
+    text-align: center;
+    padding: 1em;
+    background-color: var(--white-clr);
+    border-radius: 1em;
+}
+
+.card:hover .qr-code > img {
+    scale: 1.1;
+}
+
+.card .qr-code {
+    border-radius: 1em;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.card .qr-code > img {
+    display: block;
+    max-width: 100%;
+    transition: 0.3s ease;
+}
+
+
+.content > * {
+    margin-top: 1em;
+    user-select: none;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+}
+
+.content > p {
+    margin-bottom: 2em;
+}
